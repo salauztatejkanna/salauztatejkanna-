@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PowerPlan</title>
+</head>
+
+<body  onload = "statistikas_ielade()" >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="maja.html">Māja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ieteikumi.html"> Ieteikumi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="treninzale.html">Zale</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="statistika.html">Statistika</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Informācija par mani</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main">
+    <div style = "background-position: center center;
+      height:100%;background-attachment: fixed;
+      background-size: cover;background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijFhrihUMuxQP7onH1c3w568DMYvEFczB79Eg3EFjwkwNnCwD5Wx1cYiTRXhIUJAx8rYkoAqOttaJ2CgO2VeUcoQ-XQEC0Kyc3JHccEcg_VxRLYOJ0OQg4GS3u2iKPvWc1sPyPNylG-6pw/s1600/blue+sky+blue.jpg');" class="jumbotron">
+      <div class="container">
+      <h1 class="display-3">Informācija</h1>
+      <p>Informācija, kas palīdz</p>
+    </div>
+    </div>
+
+
+    <div class="container">
+      <div style = "width:100%;font-size:40px;" id = "statistikas_rinda" class="row">
+        <p>Ieteicamais ikdienas kalorijas patēriņš - </p>
+        <p style = "width:100%;" id = "IIKP"></p><br>
+        <img style = " clear: both;width:80%;height:80%"src = "https://www.healthychildren.org/SiteCollectionImages/energybalance_calories_chart.jpg"> 
+        
+        <p>Pamata vielmaiņas ātrums (BMR) - </p>
+        <p id = "PVA"></p>
+        
+        <p>Ķermeņa masas indeks (BMI) - </p>
+        <p id = "KMI" ></p>
+        
+        <p>Vidukļa un gurnu attiecība - </p>
+        <p style = "width:100%"id = "VGA" ></p>
+         <img src = "https://qph.cf2.quoracdn.net/main-qimg-a1dcee0fa3850da20e38698398567a90-lq"> 
+      </div>
+    </div> 
+
+
+
+    </main>
+  
+ 
+
+    </body>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src = "statistika_script.js"></script>
+
+    </html>
