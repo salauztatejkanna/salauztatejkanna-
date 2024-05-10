@@ -26,6 +26,7 @@ catch (error) {
 
 
 function statistikas_ielade(){
+  console.log(noklusejuma_lietotajs["Aktivitātes_biežums"])
   console.log(noklusejuma_lietotajs["Dzimums"])
   /// BMR 
   var BMR = 0
@@ -38,9 +39,18 @@ function statistikas_ielade(){
       break
   }
   switch (noklusejuma_lietotajs["Aktivitātes_biežums"]){
-    case "Aktīvs":
-       IKP = BMR * 1.725
+    case "Neaktīvs":
+      IKP = BMR * 1.2
       break
+    case "Nedaudz aktīvs":
+      IKP = BMR * 1.375
+      break
+    case "Aktīvs":
+       IKP = BMR * 1.55
+      break
+    case "Ļoti aktīvs":
+      IKP = BMR * 1.725
+      break 
     case "":
     
   }
@@ -51,14 +61,13 @@ function statistikas_ielade(){
   var statistika_par_mani = {
     "IIKP": Math.round(IKP) + " kalorijas", 
     "PVA": BMR,
-    "KMI": ((noklusejuma_lietotajs["Svars"], 2)/noklusejuma_lietotajs["Augums"]).toFixed(2) + " kg²/cm",
+    "KMI": (noklusejuma_lietotajs["Svars"]/((noklusejuma_lietotajs["Augums"]/100)**2)).toFixed(2) + " kg/m²",
     "VGA":  (noklusejuma_lietotajs["vidukļa_apkārtmērs"]/noklusejuma_lietotajs["gurnu_apkārtmērs"]).toFixed(2),
   }
   
   for (var informacija in statistika_par_mani) {
     elemnts = document.getElementById(informacija)
     elemnts.innerHTML = statistika_par_mani[informacija]
-    console.log(informacija)
   }
  
 
